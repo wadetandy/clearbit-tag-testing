@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Clearbit Demo and Testing Page</title>
+    <link rel="icon" href="https://theme.zdassets.com/theme_assets/978257/920c5dc523ca1bb76148e7a4908249c54dddf234.png">
+
+    <style>
+      .container { width: 100%; text-align: center; }
+      .container img { height: 250px; }
+      .container button { margin: 15px 0; text-transform: uppercase; font-size: 1.10em; padding: 5px; }
+    </style>
+
+    <script src="https://clearbit-x-pr-6343.dev.clearbit.com/v1/pk_f0b65a83c40cd4656f713e106e6fac3d/tags.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('clearbit-forms-ready', () => {
+        const form = window.myForm;
+        const email = window.emailInput;
+        const firstName = window.firstNameInput;
+        const lastName = window.lastNameInput;
+        const jobTitle= window.jobTitleInput;
+        const companyName = window.companyNameInput;
+
+        window.ClearbitForms.initializeCustomForm(
+          form,
+          email,
+          {
+            'first_name': firstName,
+            'last_name': lastName,
+            'job_title': jobTitle,
+            'company_name': companyName,
+          }
+        )
+      })
+    </script>
+  </head>
+
+  <body>
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="xforms.html">X-Forms</a>
+      <a href="segment.html">Segment</a>
+      <a href="datalayer_optimize.html">Datalayer & Optimize</a>
+      <a href="intercom.html">Intercom</a>
+      <a href="hubspot.html">HubSpot Embedded Forms</a>
+      <a href="pardot.html">Pardot Embedded Forms</a>
+      <a href="hubspot_on_platform.html">HubSpot Forms on Platform</a>
+    </div>
+    <div class="container">
+      <img src="https://cl.ly/719bff4b76ec/default_hero.jpg">
+    </div>
+    <div class="container">
+      <form id="myForm">
+        <div>
+          <input id="emailInput" name="email" placeholder="Email">
+        </div>
+        <div>
+          <input id="firstNameInput" name="first_name" placeholder="First Name">
+        </div>
+        <div>
+          <input id="lastNameInput" name="last_name" placeholder="Last Name">
+        </div>
+        <div>
+          <input id="jobTitleInput" name="job_title" placeholder="Job Title">
+        </div>
+        <div>
+          <input id="companyNameInput" name="company_name" placeholder="Company Name">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
