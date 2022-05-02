@@ -17,21 +17,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
       document.addEventListener('clearbit-forms-ready', () => {
-        const form = window.myForm;
-        const email = window.emailInput;
-        const firstName = window.firstNameInput;
-        const lastName = window.lastNameInput;
-        const jobTitle= window.jobTitleInput;
-        const companyName = window.companyNameInput;
-
         window.ClearbitForms.initializeCustomForm(
-          form,
-          email,
+          window.myForm,
+          window.emailInput,
           {
-            'first_name': firstName,
-            'last_name': lastName,
-            'job_title': jobTitle,
-            'company_name': companyName,
+            'first_name': window.firstNameInput,
+            'last_name': window.lastNameInput,
+            'job_title': window.jobTitleInput,
+            'company_name': window.companyNameInput,
           }
         )
       })
