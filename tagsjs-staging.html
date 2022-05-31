@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Clearbit Demo and Testing Page</title>
+    <link rel="icon" href="https://theme.zdassets.com/theme_assets/978257/920c5dc523ca1bb76148e7a4908249c54dddf234.png">
+
+    <style>
+      .container { width: 100%; text-align: center; }
+      .container img { height: 250px; }
+      .container button { margin: 15px 0; text-transform: uppercase; font-size: 1.10em; padding: 5px; }
+    </style>
+
+    <!-- poll for definition -->
+    <script>
+      var pollForDefinition=function(scope,varname,callback){if(typeof scope[varname]!=="undefined"){return callback()}var interval=setInterval(function(){if(typeof scope[varname]!=="undefined"){clearInterval(interval);callback()}},250)};
+    </script>
+
+    <script src="https://app.staging.clearbit.io/v1/pk_e88cd8304d5c8a78289609d16d26866c/tags.js"></script>
+
+    <!-- Clearbit for Marketo Forms Enrichment -->
+    <!-- <script type="text/javascript">
+      var pollForDefinition = function (scope, varname, callback) {
+        if (typeof scope[varname] !== "undefined") {
+          return callback();
+        }
+        var interval = setInterval(function () {
+          if (typeof scope[varname] !== "undefined") {
+            clearInterval(interval);
+            callback();
+          }
+        }, 250);
+      };
+      var script = document.createElement("script");
+      script.src = "https://marketo.clearbit.com/assets/v1/marketo/forms.js";
+      script.async = true;
+      script.setAttribute("data-clearbit-publishable-key", "pk_6bb1103d8825e32f7139e4988ce0833e");
+      script.onerror = function (e) {
+        console.log("Clearbit Form JS unable to load");
+        pollForDefinition(window, "MktoForms2", function () {
+          MktoForms2.whenReady(function (form) {
+            form.setValues({ clearbitFormStatus: "Clearbit Form JS unable to load" });
+          });
+        });
+      };
+      document.head.appendChild(script); -->
+    </script>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) - Main -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBFF27D"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Google Tag Manager (noscript) - Partner Demo -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZ9KLT4"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="navigation">
+      <a href="index.html">Home</a>
+      <a href="xforms.html">X-Forms</a>
+      <a href="segment.html">Segment</a>
+      <a href="datalayer_optimize.html">Datalayer & Optimize</a>
+      <a href="intercom.html">Intercom</a>
+      <a href="hubspot.html">HubSpot Embedded Forms</a>
+      <a href="pardot.html">Pardot Embedded Forms</a>
+      <a href="hubspot_on_platform.html">HubSpot Forms on Platform</a>
+      <a href="marketo-on-platform.html">Marketo Forms on Platform</a>
+    </div>
+    <div class="container">
+      <img src="https://cl.ly/719bff4b76ec/default_hero.jpg">
+    </div>
+    <div class="container">
+      <button>sign up</button>
+    </div>
+    <!-- regular mkto form with dynamic enrichment -->
+    <script src="//app-ab32.marketo.com/js/forms2/js/forms2.js"></script>
+    <form id="mktoForm_1091"></form>
+    <script>MktoForms2.loadForm("https://app-ab32.marketo.com", "797-LZE-483", 1091);</script>
+    <!-- End regular mkto form -->
+
+    <!-- Begin single-field form for reveal testing -->
+    <!-- <script src="//app-ab32.marketo.com/js/forms2/js/forms2.min.js"></script>
+    <form id="mktoForm_1190"></form>
+    <script>MktoForms2.loadForm("//app-ab32.marketo.com", "797-LZE-483", 1190);</script> -->
+    <!-- end single-field form -->
+
+    <!-- Begin form for testing autofill functionality -->
+    <!-- <script src="//app-ab32.marketo.com/js/forms2/js/forms2.min.js"></script>
+    <form id="mktoForm_1183"></form>
+    <script>MktoForms2.loadForm("//app-ab32.marketo.com", "797-LZE-483", 1183);</script> -->
+    <!-- End form for testing autofill functionality -->
+
+    <!-- Munchkin tracking code -->
+    <script type="text/javascript">
+      (function() {
+        var didInit = false;
+        function initMunchkin() {
+          if(didInit === false) {
+            didInit = true;
+            Munchkin.init('797-LZE-483');
+          }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function() {
+          if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            initMunchkin();
+          }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+      })();
+    </script>
+    <!-- End Munchkin Tracking Code -->
+
+    <script>MktoForms2.whenReady(function(form){window.form = form})</script>
+
+    <!-- Marketo Forms Enrichment -->
+    <!-- <script type="text/javascript">var pollForDefinition=function(scope,varname,callback){if(typeof scope[varname]!=="undefined"){return callback()}var interval=setInterval(function(){if(typeof scope[varname]!=="undefined"){clearInterval(interval);callback()}},250)};var script=document.createElement("script");script.src="https://marketo.clearbit.com/assets/v1/marketo/forms.js";script.async=true;script.setAttribute("data-clearbit-publishable-key", "pk_6bb1103d8825e32f7139e4988ce0833e");script.onerror=function(e){console.log("Clearbit Form JS unable to load");pollForDefinition(window,"MktoForms2",function(){MktoForms2.whenReady(function(form){form.setValues({clearbitFormStatus:"Clearbit Form JS unable to load"})})})};document.body.appendChild(script);</script> -->
+
+    <!-- Marketo Forms dev env -->
+    <!-- <script type="text/javascript">var pollForDefinition=function(scope,varname,callback){if(typeof scope[varname]!=="undefined"){return callback();} var interval=setInterval(function(){if(typeof scope[varname]!=="undefined"){clearInterval(interval);callback();}},250);};var script=document.createElement("script");script.src="https://marketo.dev.clearbit.io/assets/v1/marketo/forms.js";script.async=true;script.setAttribute("data-clearbit-publishable-key","pk_6bb1103d8825e32f7139e4988ce0833e");script.onerror=function(e){console.log("Clearbit Form JS unable to load");pollForDefinition(window,"MktoForms2",function(){MktoForms2.whenReady(function(form){form.setValues({clearbitFormStatus:"Clearbit Form JS unable to load"});});});};document.body.appendChild(script);</script> -->
+
+    <!-- send datalayerevent on formReady -->
+    <script>
+      pollForDefinition(window,"MktoForms2",function() {
+        MktoForms2.whenReady(function(form){
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            'event': 'MarketoFormLoaded'
+          })
+        })
+      })
+    </script>
+
+    <!-- pre-fill email from query param -->
+    <script>
+      pollForDefinition(window,"MktoForms2",function(form) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const emailParam = urlParams.get('my_email');
+        if (emailParam) {
+          form.setValues({"Email":emailParam});
+        }
+      })
+    </script>
+
+    <script>
+      MktoForms2.whenReady(function(form) {
+        form.onSuccess(function(values, followUpUrl) {
+          clearbit.identify(values.Email, {
+            "email": values.Email
+          })
+        })
+      })
+    </script>
+    <!-- <script type="text/javascript" src="https://clearbitjs.com/v1/x/forms.js"></script>
+    <div class="clearbit-form" data-form-id="632929e6-4532-4d82-b75a-5637ba11adcf" data-theme="default" ></div> -->
+
+    <!-- Reveal into GA via analytics.js for property UA-140690463-2-->
+    <!-- <script>
+      var gaConfig = function(){
+        var revealTrackingIds = ["UA-140690463-2"];
+        var ga_trackers=[];
+        ga(function(){
+          ga.getAll().forEach(function(x,i){
+            if(revealTrackingIds.indexOf(x.get('trackingId')) !== -1) {
+              ga_trackers.push(x.get('name'))
+            }
+          });
+          ga_trackers.forEach(function(gaName){
+            ga(gaName + '.require', 'Clearbit', {
+              "mapping": {
+                "type":"dimension3",
+                "companyName":"dimension4",
+                "companyDomain":"dimension5",
+                "companyIndustry":"dimension6",
+                "companySubIndustry":"dimension7",
+                "companyEmployeesRange":"dimension8",
+                "companyEstimatedAnnualRevenue":"dimension9",
+                "companyAlexaRank":"dimension10",
+                "companyCity":"dimension11",
+                "companyState":"dimension12",
+                "companyCountry":"dimension13",
+                "companySicCode":"dimension14",
+                "companyTech":"dimension15"
+              }
+            });
+          })
+        });
+      };
+      let gaPollStart = Date.now()
+      let gaPoll = setInterval(function() {
+        if (typeof window.ga !== 'undefined') {
+          clearInterval(gaPoll);
+          gaConfig();
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.src = "https://ga.clearbit.com/v1/ga.js?authorization=pk_5fdce9b9374f2f8a4f8c9f4a1546fa35";
+          document.body.appendChild(s);
+        }
+        else if(Date.now() - gaPollStart > 2000) {
+          clearInterval(gaPoll);
+        }
+      }, 100);
+    </script> -->
+    <!-- End Reveal into GA via analytics.js-->
+
+    <!-- Reveal into GA via gtag.js-->
+    <!-- <script src="https://reveal.clearbit.com/v1/companies/reveal?authorization=pk_5fdce9b9374f2f8a4f8c9f4a1546fa35&variable=reveal"></script>
+    <script>
+      let reveal_gtag_map = {
+        'send_page_view': false,
+        'custom_map': {
+          'dimension1': 'type',
+          'dimension2': 'companyName',
+          'dimension3': 'companyDomain',
+          'dimension4': 'companyIndustry',
+          'dimension5': 'companySubIndustry',
+          'dimension6': 'companyEmployeesRange',
+          'dimension7': 'companyEstimatedAnnualRevenue',
+          'dimension8': 'companyAlexaRank',
+          'dimension9': 'companyCity',
+          'dimension10': 'companyState',
+          'dimension11': 'companyCountry',
+          'dimension12': 'companySicCode',
+          'dimension13': 'companyTech'
+        }
+      }
+
+      // This line configures the tracking ID with the mapping
+      gtag('config', 'UA-140690463-2', reveal_gtag_map);
+
+      let reveal_data_map = {};
+      let nonCompany = "(Non-Company)";
+
+      if(reveal === null || reveal.company === null) {
+        reveal_data_map = {
+          'non_interaction': true,
+          'type': reveal ? reveal.type : nonCompany,
+          'companyName':nonCompany,
+          'companyDomain':nonCompany,
+          'companyIndustry':nonCompany,
+          'companySubIndustry':nonCompany,
+          'companyEmployeesRange':nonCompany,
+          'companyEstimatedAnnualRevenue':nonCompany,
+          'companyAlexaRank':nonCompany,
+          'companyCity':nonCompany,
+          'companyState':nonCompany,
+          'companyCountry':nonCompany,
+          'companySicCode':nonCompany,
+          'companyTech':nonCompany
+        };
+      }
+      else {
+        let company = reveal.company;
+
+        reveal_data_map = {
+          'non_interaction': true,
+          'type':reveal.type,
+          'companyName':company.name,
+          'companyDomain':company.domain,
+          'companyIndustry':company.category.industry,
+          'companySubIndustry':company.category.subIndustry,
+          'companyEmployeesRange':company.metrics.employeesRange,
+          'companyEstimatedAnnualRevenue':company.metrics.estimatedAnnualRevenue,
+          'companyAlexaRank':company.metrics.alexaGlobalRank,
+          'companyCity':company.geo.city,
+          'companyState':company.geo.state,
+          'companyCountry':company.geo.country,
+          'companySicCode':company.category.sicCode,
+          'companyTech':company.tech
+        };
+      }
+
+      gtag('event', 'Clearbit', reveal_data_map);
+    </script> -->
+    <!--End Reveal to GA via gtag.js-->
+
+    <!-- Reveal Personalization -->
+    <!-- <script async src="https://reveal.clearbit.com/v1/companies/reveal?variable=reveal&authorization=pk_5fdce9b9374f2f8a4f8c9f4a1546fa35"></script> -->
+
+  </body>
+</html>
